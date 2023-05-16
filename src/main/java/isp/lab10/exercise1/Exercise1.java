@@ -52,9 +52,9 @@ public class Exercise1 {
         }
 
     public static void main(String[] args) {
-
+        ATC atc = new ATC();
         while(true){
-            displayMenu(new ATC());
+            displayMenu(atc);
         }
 
     }

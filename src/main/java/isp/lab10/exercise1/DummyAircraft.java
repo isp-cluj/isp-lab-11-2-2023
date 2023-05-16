@@ -1,6 +1,6 @@
 package isp.lab10.exercise1;
 
-public class DummyAircraft extends Thread{
+public class DummyAircraft implements Runnable{
 
     String id;
     String lock = "lock";
@@ -9,6 +9,11 @@ public class DummyAircraft extends Thread{
     public DummyAircraft(String id) {
         this.id = id;
         System.out.println("Aircraft "+id+" is created. Ready to take off.");
+    }
+
+    public void start(){
+        Thread t = new Thread(this);
+        t.start();
     }
 
     public void run(){
@@ -38,5 +43,12 @@ public class DummyAircraft extends Thread{
         synchronized (lock){
             lock.notify();
         }
+    }
+
+    public static void main(String[] args) {
+        DummyAircraft da = new DummyAircraft("1");
+        //da.start();
+        Thread t  = new Thread(da);
+        t.start();
     }
 }
