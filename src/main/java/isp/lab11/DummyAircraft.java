@@ -1,4 +1,4 @@
-package isp.lab10.exercise1;
+package isp.lab11;
 
 public class DummyAircraft implements Runnable{
 

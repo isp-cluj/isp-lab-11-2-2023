@@ -1,8 +1,8 @@
-package isp.lab10.exercise1;
+package isp.lab11;
 
 import java.util.Scanner;
 
-public class Exercise1 {
+public class Exercise {
     static DummyAircraft dummyAircraft = null;
     public static void displayMenu(ATC atc) {
         Scanner scanner = new Scanner(System.in);
