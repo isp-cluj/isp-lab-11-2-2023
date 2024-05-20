@@ -1,9 +1,11 @@
 package isp.lab11;
 
+import java.util.UUID;
+
 public class DummyAircraft implements Runnable{
 
     String id;
-    String lock = "lock";
+    String lock = UUID.randomUUID().toString();
     int k = 0;
 
     public DummyAircraft(String id) {
